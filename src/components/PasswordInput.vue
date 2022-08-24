@@ -10,10 +10,10 @@ const props = defineProps<{
     lock: () => void
 }>()
 const content_types = [{
-    label: "文本",
+    label: "text",
     value: 'text'
 }, {
-    label: "表格",
+    label: "sheet",
     value: 'sheet'
 }]
 const content_type = ref<ContentType>('text')
@@ -23,13 +23,13 @@ const handleClick = async () => {
     if (!decr.success) {
         if (decr.isFirst) {
             if (content.value === "") {
-                message.error("密码不能为空！")
+                message.error("password can not be blank! ")
             } else {
                 await saveData("", content.value, content_type.value)
                 props.unlock(content.value)
             }
         } else
-            message.error("密码错误！")
+            message.error("wrong password! ")
     } else {
         props.unlock(content.value)
     }
@@ -63,7 +63,7 @@ onMounted(async () => {
                 margin: '10px',
                 width: '100%'
             }">
-                <n-input :on-update:value="handleInput" :placeholder="isFirstToSetPassword ? '请设置初始密钥' : '请输入密钥'"
+                <n-input :on-update:value="handleInput" :placeholder="isFirstToSetPassword ? 'Please set the initial key' : 'Please enter key'"
                     @keyup="handleKeyUp" passively-activated round type="password" />
             </n-space>
         </n-gi>
@@ -71,7 +71,7 @@ onMounted(async () => {
             <n-space justify="space-around" :item-style="{
                 margin: '10px'
             }">
-                <n-button @click="handleClick" type="primary" ghost>解锁</n-button>
+                <n-button @click="handleClick" type="primary" ghost>unlock</n-button>
             </n-space>
         </n-gi>
         <n-gi span="3">
