@@ -19,7 +19,7 @@ const unlockPure = async (password: string, tips?: boolean) => {
   } else {
     if (!r.isFirst) {
       if (tips != false)
-        message.error("密码错误")
+        message.error("wrong password")
       wrong_password_cache.value = password
     }
   }
