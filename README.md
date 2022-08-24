@@ -1,45 +1,47 @@
 # sy-secret-block
 
-## 功能
-一个加密的文本块，可以用于储存密码。  
-输入密码，用于加密和解锁文本块。创建块后，第一次输入的密码就是加密用的密码。  
-输入密码后，将会解锁打开页面中所有密码相同的块。
-还可以自动生成14位密码。  
+just a translation to english
 
-## 手动安装
-下载release里的压缩包，解压，放到`工作目录/data/widgets/sy-secret-block`下。  
+## Function
+An encrypted text block that can be used to store passwords.
+Enter a password to encrypt and unlock text blocks. After the block is created, the password entered for the first time is the password used for encryption.
+After entering the password, all blocks with the same password in the open page will be unlocked.
+14-digit passwords can also be automatically generated.
 
-## 其他
-曾经想要搞个密码管理软件，但又懒得下各种第三方应用，也不太信任第三方的安全性，打算自己搞一个。不过云同步、多端APP什么的做起来好麻烦，于是一直都没有搞。
+## Manual installation
+Download the compressed package in the release, unzip it, and put it in the `working directory/data/widgets/sy-secret-block`.
 
-最近买了思源笔记的会员，发现挂件真是个神奇的功能，可以自己用前端技术做一个小挂件，能利用笔记本身的同步，还能和别的富文本组织在一起……真是太棒了！
+## other
+I once wanted to develop a password management software, but I was too lazy to download various third-party applications, and I didn't trust the security of the third-party, so I planned to develop one myself. However, cloud synchronization and multi-terminal APP are very troublesome to do, so I have never done it.
 
-于是做了这么一个小挂件。创建挂件后，第一次输入的密码将会用于给这个挂件加密，以后再输入，就用这个密码解密。为了方便起见，输入密码后会保持十分钟的解锁时间。
+Members who bought Siyuan Notes recently found that the pendant is really a magical function. You can use the front-end technology to make a small pendant, you can use the synchronization of the notebook body, and you can organize it with other rich texts... It's really great!
 
-鉴于储存密码的设计目的，还有一个快捷键用于生成14位随机密码。
+So I made this little pendant. After the pendant is created, the password entered for the first time will be used to encrypt the pendant, and if it is entered later, it will be decrypted with this password. For convenience, a ten-minute unlock time is maintained after entering the password.
 
-不要担心，没有任何密钥信息被储存，也就是如果你忘了密码，那就再也不能解密了（不使用暴力手段的话）。内容本身是被加密储存的，所以不要想着通过查看属性绕过密码~
+Due to the design purpose of storing passwords, there is also a shortcut key for generating a random 14-digit password.
 
-**注意**，这个挂件仍有不方便的地方，可能并不契合你的需求：
+Don't worry, no key information is stored, i.e. if you forget the passphrase, it can never be decrypted again (without brute force). The content itself is encrypted and stored, so don't think about bypassing the password by viewing the properties~
 
-创建块之后，默认块的大小并不是最舒服的，需要手动调整。
-文本块内只能保存纯文本，并不能保存笔记。
-似乎并没有办法保存插件的全局信息，所以无法配置默认设定，比如密码生成长度和方式。
+**Note**, this pendant is still inconvenient and may not meet your needs:
 
-## 版本
+After the block is created, the default block size is not the most comfortable and needs to be adjusted manually.
+Only plain text can be saved in the text block, not notes.
+There doesn't seem to be a way to save the plugin's global information, so it's impossible to configure default settings, such as password generation length and method.
+
+## Version
 v0.2.5
-- 增加选择是否要批量解锁的功能。
+- Added the function of choosing whether to unlock in batches.
 
 v0.2.3
-- 修复缺失README导致不被挂件仓库识别的问题。
+- Fixed the issue that the missing README would not be recognized by the widget repository.
 
 v0.2.1
-- 优化菜单按钮的位置，防止遮挡滚动条。
-- 优化调整挂件时会出现意外的滚动条的问题。
+- Optimize the position of the menu button to prevent the scroll bar from being obstructed.
+- Optimized the problem of unexpected scroll bars when adjusting widgets.
 
 v0.2.0
-- 增加修改密码功能
-- 优化多个块使用不同密码的情况，应该不会出现奇怪的问题了（但请不要把密码记混了～）
+- Add the function of changing password
+- Optimize the situation where multiple blocks use different passwords, there should be no strange problems (but please don't mix passwords~)
 
 v0.1.x
-- 基本功能
+- basic skills
