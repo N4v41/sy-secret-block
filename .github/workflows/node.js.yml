@@ -36,7 +36,7 @@ jobs:
     #- run: pnpm test
     
     #zip assets
-    - run: sudo apt update && apt install -y zip
+    - run: sudo apt update && sudo apt install -y zip
     - run: cd dist
     #- uses: montudor/action-zip@v1
     #  with:
