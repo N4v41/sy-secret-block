@@ -84,7 +84,7 @@ export interface SheetData {
 
 export const defaultSheetData = (): SheetData => {
     return {
-        head: ["用户名", "密码"],
+        head: ["username", "password"],
         body: [["", ""], ["", ""], ["", ""]]
     }
 }
