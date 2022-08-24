@@ -37,14 +37,7 @@ jobs:
     - uses: montudor/action-zip@v1
       with:
         args: zip -qq -r sy-secret-block.zip dist
-    - run: ls
-    - run: pwd
- 
-  release:
-  
-    runs-on: ubuntu-latest
-    
-    steps:
+      
     - name: Create Draft Release
       id: create_release
       uses: actions/create-release@v1
@@ -55,9 +48,6 @@ jobs:
         release_name: <tofill>
         draft: true
         prerelease: false
-        
-    - run: pwd
-    - run: ls
     
     - uses: actions/upload-release-asset@v1.0.1
       env:
