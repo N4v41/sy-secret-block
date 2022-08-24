@@ -102,37 +102,37 @@ const options = newcompute(() => {
 
     let a = [
         {
-            label: '立即锁定',
+            label: 'lock-now',
             key: 'lock-now',
         }, {
-            label: '修改密码',
+            label: 'change-password',
             key: 'change-password'
         }
     ]
     if (content_type.value === "sheet") {
         a = [...a, {
-            label: "增加一行",
+            label: "add-row",
             key: "add-row"
         }, {
-            label: "增加一列",
+            label: "add-col",
             key: "add-col"
         }, {
-            label: "删除一行",
+            label: "del-row",
             key: "del-row"
         }, {
-            label: "删除一列",
+            label: "del-col",
             key: "del-col"
         }]
     }
     const enable_batch_psd = JSON.parse(window.localStorage.getItem("sy-secret-batch-secret") ?? "true")
     if (enable_batch_psd) {
         a.push({
-            label: "关闭批量解锁",
+            label: "disable-batch",
             key: "disable-batch"
         })
     } else {
         a.push({
-            label: "开启批量解锁",
+            label: "enable-batch",
             key: "enable-batch"
         })
     }
@@ -158,7 +158,7 @@ const handleBodyUpdate = (lindex: number, index: number) => {
         display: 'flex',
         flex: '1'
     }">
-        <n-input ref="inputRef" type="textarea" :on-update:value="handleContent" :value="content" placeholder="秘密藏在这~"
+        <n-input ref="inputRef" type="textarea" :on-update:value="handleContent" :value="content" placeholder="The secret is here~"
             :style="{
                 display: 'flex',
                 flex: '1',
@@ -181,7 +181,7 @@ const handleBodyUpdate = (lindex: number, index: number) => {
             </tbody>
         </n-table>
         <n-button circle :style="{ position: 'absolute', right: '5px', bottom: '5px' }" @click="makePassword"
-            v-if="content === ''">密</n-button>
+            v-if="content === ''">Close</n-button>
         <n-dropdown trigger="click" @select="handleSelect" :options="options" placement="bottom-end">
             <n-button circle :style="{
                 position: 'absolute',
