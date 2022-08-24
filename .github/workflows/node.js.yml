@@ -36,13 +36,16 @@ jobs:
     #- run: pnpm test
     
     #zip assets
-    - run: sudo apt update && sudo apt install -y zip
+    - run: sudo apt update | /dev/null && sudo apt install -y zip | /dev/null
+    - run: ls
     - run: cd dist
     #- uses: montudor/action-zip@v1
     #  with:
     #   args: zip -qq -r ../sy-secret-block.zip ./*
     - run: zip -qq -r ../sy-secret-block.zip *
+    - run: ls
     - run: cd ..
+    - run: ls
         
 #  release:
   
