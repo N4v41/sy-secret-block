@@ -38,11 +38,11 @@ jobs:
       with:
         args: zip -qq -r sy-secret-block.zip dist
         
-  release:
+#  release:
   
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
+#    runs-on: ubuntu-latest
+#    needs: build
+#    steps:
     - name: Create Draft Release
       id: create_release
       uses: actions/create-release@v1
