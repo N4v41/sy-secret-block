@@ -38,13 +38,11 @@ jobs:
     #zip assets
     - run: sudo apt update > /dev/null && sudo apt install -y zip > /dev/null
     - run: ls
-    - run: cd dist
+    - run: cd dist && zip -qq -r sy-secret-block.zip * && cp sy-secret-block.zip ../
     #- uses: montudor/action-zip@v1
     #  with:
     #   args: zip -qq -r ../sy-secret-block.zip ./*
-    - run: zip -qq -r ../sy-secret-block.zip *
-    - run: ls
-    - run: cd ..
+    - run: ls dist
     - run: ls
         
 #  release:
