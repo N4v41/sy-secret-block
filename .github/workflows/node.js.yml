@@ -25,12 +25,13 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+        #cache: 'npm'
     - uses: pnpm/action-setup@v2.2.2
+      name: Install pnpm
       with:
        version: latest
     - run: npm i vue-tsc -D
-    - run: pnpm ci
+    #- run: pnpm ci
     - run: pnpm run build --if-present
     - run: pnpm test
     - uses: montudor/action-zip@v1
