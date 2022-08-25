@@ -2,6 +2,8 @@
 
 just a translation to english
 
+![preview](preview.png)
+
 ## Function
 An encrypted text block that can be used to store passwords.
 Enter a password to encrypt and unlock text blocks. After the block is created, the password entered for the first time is the password used for encryption.
